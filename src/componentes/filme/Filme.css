@@ -4,7 +4,12 @@
     background-color: hotpink;
 }
 
-.filme-content>img{
+.imagens{
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-meio{
     width: 300px;
-    height: auto;
+    height: 60vh;
 }
