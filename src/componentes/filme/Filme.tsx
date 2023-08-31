@@ -1,21 +1,21 @@
 
 import './Filme.css'
-import imagem1 from "..//img/fbarbie1.webp"
-import imagem2 from "..//img/fbarbie2.webp"
-import imagem3 from "..//img/fbarbie3.webp"
-import imagem4 from "..//img/fbarbie4.webp"
+import imagem from "..//img/fbarbie1.webp"
 
-function Filme(){
+type FilmeProps = {
+    titulo:string,
+    sinopse:string,
+    imagem:string
+}
+
+function Filme(props:FilmeProps){
     return(
         <div className="filme-content">
-            <div className='imagens'>   
-            <img className='img-meio' src={imagem2} alt="" />
-            <img className='img-meio' src={imagem3} alt="" />
-            <img className='img-meio' src={imagem1} alt="" />
-            <img className='img-meio' src={imagem4} alt="" />
+            <img src={imagem} alt="" />
+            <div className='text-barbie'>
+            <h1>{props.titulo}</h1>
+            <p className='sinopse'>{props.sinopse}</p>
             </div>
-           
-        
         </div>
     )
 }

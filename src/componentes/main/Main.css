@@ -1,0 +1,6 @@
+.content-main{
+    display: flex;
+    gap: 15px;
+    padding: 15px 100px;
+    height: auto;
+}
