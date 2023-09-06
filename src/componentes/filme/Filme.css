@@ -1,13 +1,24 @@
 .filme-content{
-    width: 200px;
+    width: 300px;
     padding: 20px;
     box-shadow: 0px 0px 31px 23px rgba(0,0,0,0.1);
     font-family: 'Montserrat', sans-serif;
+    background-color: rgb(250, 161, 206)
 }
 
-.filme-content>img{
+.foto-filme{
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+
+}
+
+.foto-filme>img{
     width: 100%;
     height: auto;
+    max-height: 400px;
+    overflow: hidden;
+    margin-bottom: 15px;
 }
 
 .sinopse{
@@ -16,6 +27,6 @@
 }
 
 .text-barbie{
-    color: rgb(48, 43, 43);
+    color: rgb(77, 70, 70);
     line-height: 1.9em;
 }

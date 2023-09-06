@@ -1,6 +1,4 @@
-
 import './Filme.css'
-import imagem from "..//img/fbarbie1.webp"
 
 type FilmeProps = {
     titulo:string,
@@ -8,14 +6,21 @@ type FilmeProps = {
     imagem:string
 }
 
+
 function Filme(props:FilmeProps){
     return(
         <div className="filme-content">
-            <img src={imagem} alt="" />
+
+           <div 
+           className="foto-filme"><img className='img-filme' src={props.imagem} alt="" />
+           </div> 
+
             <div className='text-barbie'>
             <h1>{props.titulo}</h1>
             <p className='sinopse'>{props.sinopse}</p>
+
             </div>
+
         </div>
     )
 }
