@@ -1,14 +1,48 @@
 import Filme from './../filme/Filme'
 import './Main.css'
+import {useState} from 'react'
+type FilmeTypes = {
+    id: number,
+    titulo: string,
+    sinopse: string,
+    imagem: string
+}
+
 export default function Main(){
+   // const textodigitado = 'Barbie'
+   const [textodigitado, funcaoMudaVariavel] = useState ()
+   const filmes:FilmeTypes[] = [
+       {
+           id: 1,
+           titulo:'Barbie', 
+           sinopse:'Depois de ser expulsa da Barbieland, felicidade.',
+           imagem: '/barbiereal.jpg'
+       },
+       {
+           id: 2,
+           titulo:'Barbie', 
+           sinopse:'Depois de ser expulsa da Barbieland, felicidade.',
+           imagem: '/barbiereal.jpg'
+       },
+   ]
+       
+    function TrataTexto(e:React.ChangeEvent<HTMLInputElement>){
+        funcaoMudaVariavel(e.target.value)
+    }
     return(
        
-
             <>
 
          <div className="pesquisar">
-            <input type="text" />
+            <input type="text" onChange={TrataTexto}/>
          </div>
+           
+               <div className="pesquisar">
+                {
+                (!textodigitado)?
+                "":<p>Resultados para: {textodigitado} </p>
+                }
+           </div>
 
              <main className='content-main'>
 
