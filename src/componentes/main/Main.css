@@ -2,15 +2,21 @@
     display: flex;
     gap: 15px;
     padding: 15px 100px;
-    justify-content: center;
     flex-wrap: wrap;
-    height: auto;
-}
-.pesquisar{
-    border-radius: 4px;
-    display: flex;
     justify-content: center;
-    padding: 20px;
-    height: 25px;
-    background-color: rgb(243, 145, 194);
+}
+.campo_pesquisa{
+    padding: 15px 100px;
+}
+.botao_pesquisa{
+    height: 30px;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+
+}
+.botao_pesquisa:focus {
+    outline: 1px solid rgb(138, 157, 255);  
+   }
+.botao_pesquisa.visited {
+    outline: 1px solid rgb(138, 157, 255);   
 }
