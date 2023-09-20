@@ -6,9 +6,9 @@
     padding: 3rem 3.5rem;
 }
 footer{
-    position: fixed;
+    position: absolute;
     width: 100%;
-    bottom: 0;
+    bottom: -10%;
     background-color: rgb(250, 161, 206);
     height: 227px;
 }

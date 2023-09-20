@@ -1,6 +1,6 @@
 import './Footer.css'
 import Link from './../link/Link'
-import imagem from "../img/barbielogorodape.png"
+
 
 
 export function Footer(){
@@ -8,8 +8,6 @@ export function Footer(){
       <footer>
         <nav>
             <div className='listas'>
-              <div className='logo-rodape'><img className='img-rodape' src={imagem} alt="" />
-              </div>
                 <ul className='coisas-da-lista'>
                   <h3 className='titulo-rodape'>Produtos</h3>
                     <li> <Link texto='Barbie Golfinho Mágico'/> </li>
