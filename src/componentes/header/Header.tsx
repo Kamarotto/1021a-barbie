@@ -1,23 +1,24 @@
 import './Header.css'
 import Link from './../link/Link'
-
-export function Header(){
+function Header(){
     return(
         <header>
-            
+            <div>
+                <h1>Logo</h1>
+            </div>
             <nav>
-                <ul className='botoes'>
-                    <li className='btn btn1'>
+                <ul>
+                    <li>
                         <Link texto='Home'/>
                     </li>
-                    <li className='btn btn1'>
-                        <Link texto='Notícias'/>
+                    <li>
+                        <Link texto='Notícia'/>
                     </li>
-                    <li className='btn btn1'>
+                    <li>
                         <Link texto='Sobre'/>
                     </li>
-                    <li className='btn btn1'>
-                     <Link texto='Contato'/>
+                    <li>
+                        <Link texto='Contato'/>
                     </li>
                 </ul>
             </nav>

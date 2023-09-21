@@ -1,56 +1,19 @@
-*{
-    margin: 0;
-  }
-  img{
-    height: 75px;
-  }
-  header{
-    justify-content: space-between;
-    background-color: rgb(250, 161, 206);
-    padding:40px;
-    display: flex;
-    align-items: center;
-  }
-  header ul{
-    display: flex;
-    list-style: none;
-    gap: 15px;
-  }
-  header ul li a{
-    padding: 15px;
-    text-decoration: none;
-    color: white;
-    border: 1px solid hotpink;
-  }
-  .botoes{
-    transform: translate(-50%,-50%);
-  }
-  .btn{
-      position: relative;
-      display: block;
-      color: white;
-      font-size: 14px;
-      font-family: "montserrat";
-      text-decoration: none;
-      border: 2px solid hotpink;
-      text-transform: uppercase;
-      overflow: hidden;
-      transition: 1s all ease;
-  }
-  .btn::before{
-    background: rgb(204, 88, 169);
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    z-index: -1;
-    transition: all 0.6s ease;
-  }
-  .btn1::before{
-    width: 0%;
-    height: 100%;
-  }
-  .btn:hover::before{
-    width: 100%;
-  }
+header{
+  background-color: lightpink;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10vw;
+  align-items: center;
+}
+header ul{
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+header ul li a{
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+  border: 1px solid hotpink;
+
+}

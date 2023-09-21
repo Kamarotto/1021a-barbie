@@ -1,4 +1,4 @@
-function Link(props:{texto:string}) {
+function Link(props:{texto:string}){
     return(
         <a href="#">{props.texto}</a>
     )
