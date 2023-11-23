@@ -5,8 +5,8 @@ import axios from 'axios'
 type FilmeType = {
     id:number,
     titulo:string,
-    sinopse:string,
-    imagem:string
+    descricao:string,
+    foto:string
 }
 
 const URL_API = "http://localhost:3000/filmes";
@@ -51,9 +51,9 @@ export default function Main() {
                         (filme)=>
                             <Filme 
                                 key={filme.id}
-                                sinopse={filme.sinopse}
+                                descricao={filme.descricao}
                                 titulo={filme.titulo}
-                                imagem={filme.imagem}
+                                foto={filme.foto}
                             />
                     )
                 }
@@ -64,7 +64,7 @@ export default function Main() {
                    Barbieland por ser uma boneca de aparência 
                    menos do que perfeita, Barbie parte para o 
                    mundo humano em busca da verdadeira felicidade.'
-                    imagem='/barbie.png'
+                    foto='/barbie.png'
                 />
                 <Filme titulo='Filme Barbie'
                     sinopse='Depois de ser expulsa da 
