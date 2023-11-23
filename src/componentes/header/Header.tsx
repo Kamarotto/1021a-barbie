@@ -1,29 +1,31 @@
 import './Header.css'
-import Link from './../link/Link'
-function Header(){
-    return(
-        <header>
-            <div>
-                <h1>Logo</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li>
-                        <Link texto='Home'/>
-                    </li>
-                    <li>
-                        <Link texto='Notícia'/>
-                    </li>
-                    <li>
-                        <Link texto='Sobre'/>
-                    </li>
-                    <li>
-                        <Link texto='Contato'/>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-    )
+import LinkNav from '../linknav/LinkNav'
+import imagem from '../../../public/barbie.png'
+
+export function Header(){
+  return(
+    <header>
+    <div>
+      <img className='Logo' src={imagem} alt="" />
+    </div>
+      <nav>
+        <ul>
+          <li>
+            <LinkNav url="/" texto='Home'/>
+          </li>
+          <li>
+            <LinkNav url="/noticias" texto='Noticias'/>
+          </li>
+          <li>
+            <LinkNav url="/sobre" texto='Sobre'/>
+          </li>
+          <li className='ultimo'>
+            <LinkNav url="/contato" texto='Contato'/>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  )
 }
 
 export default Header
