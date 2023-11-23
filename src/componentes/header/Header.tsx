@@ -1,12 +1,11 @@
 import './Header.css'
 import LinkNav from '../linknav/LinkNav'
-import imagem from '../../../public/barbie.png'
 
 export function Header(){
   return(
     <header>
     <div>
-      <img className='Logo' src={imagem} alt="" />
+      <h1>LOGO</h1>
     </div>
       <nav>
         <ul>

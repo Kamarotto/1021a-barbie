@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Filme from './../filme/Filme'
 import './Main.css'
+import axios from 'axios'
 type FilmeType = {
     id:number,
     titulo:string,
@@ -8,45 +9,29 @@ type FilmeType = {
     imagem:string
 }
 
+const URL_API = "http://localhost:3000/filmes";
+
 export default function Main() {
-    //let textodigitado = 'Barbie'
-    //Hooks são funções do React que ajudam a gente a fazer tarefas
-    //específicas
-    const [texto,setTexto]=useState("")
 
-    const filmes:FilmeType[] = [
-        {
-            id:1,
-            titulo:'Barbie',
-            sinopse:"Depois de ser expulsa da Barbieland por ser uma boneca de aparência menos do que perfeita, Barbie parte para o mundo humano em busca da verdadeira felicidade.",
-            imagem:'/barbie.png'
-        },
-        {
-            id:2,
-            titulo:'Filme Barbie',
-            sinopse:'Depois de ser expulsa da Barbieland por ser.',
-            imagem:'/KEN.png'
-        },
-        {
-            id:3,
-            titulo:'Filme Barbie',
-            sinopse:'Depois de ser expulsa da Barbieland por ser uma boneca de aparência menos do que perfeita, Barbie parte para o mundo humano em busca da verdadeira felicidade.',
-            imagem:'/boneca.jpg'
-        },
-        {
-            id:5,
-            titulo:'Barbie',
-            sinopse:"Depois de ser expulsa da Barbieland por ser uma boneca de aparência menos do que perfeita, Barbie parte para o mundo humano em busca da verdadeira felicidade.",
-            imagem:'/barbie.png'
-        },
-    ]
+    const [texto, setTexto] = useState("");
+    const [filmes, setFilmes] = useState<FilmeType[]>([]);
 
-    //O parâmetro "e" da minha função será o meu evento que ocorreu
+    useEffect(() => {
+        const buscarFilmes = async () => {
+            try {
+                const resposta = await axios.get<FilmeType[]>(URL_API);
+                setFilmes(resposta.data);
+            } catch (error) {
+                console.log("Erro na busca");
+            }
+     };
+            buscarFilmes(); 
+    }, []); 
+
     function TrataTexto(e:React.ChangeEvent<HTMLInputElement>){
-        //console.log(e.target.value)
-        //Como eu faço para mudar o texto para "TERE"
         setTexto(e.target.value)
     }
+
     return (
         <>
             <div className="campo_pesquisa">
